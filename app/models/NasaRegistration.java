@@ -43,7 +43,6 @@ public class NasaRegistration {
 
 	private static final String GET_ALL_USER_DATA = "http://einstein.sv.cmu.edu:9000/getAllContestUsers/json";
 	
-
 	public NasaRegistration() {
 
 	}

@@ -15,4 +15,3 @@ How to run on a local machine
 2. Downlaod the source code from https://github.com/cmusv-sc/ArchF2013-Project3-FT
 3. From the parent folder, run the command: 'play run'
 4. Local App will available at localhost:9000
-=======

@@ -1,16 +1,17 @@
-logs
-project/project
-project/target
-target
-tmp
+/logs/
+/project/project
+/project/target
+/target
+tmp/
 .history
-dist
+/dist/
 /.idea
-/*.iml
+*.iml
 /out
 /.idea_modules
 /.classpath
 /.project
+.eclipse
 /RUNNING_PID
 /.settings
 /.target
@@ -25,19 +26,10 @@ AwsCredentials.properties
 
 
 # Ignore Play! working directory #
-bin/
 /db
-.eclipse
 /lib/
-/logs/
 /modules
-/project/project
-/project/target
-/target
-tmp/
 test-result
 server.pid
-*.iml
 *.eml
-/dist/
 .cache

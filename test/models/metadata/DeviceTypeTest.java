@@ -23,7 +23,7 @@ public class DeviceTypeTest
    private static String TEST_DEVICE_TYPE = "testDeviceType";
    private static String TEST_MANUFACTURER = "testSensorType";
    private static Double TEST_VERSION = 1.00;
-   private static List<String> TEST_SENSOR_TYPE_NAMES = new ArrayList<>();
+   private static List<String> TEST_SENSOR_TYPE_NAMES = new ArrayList<String>();
    private static String TEST_USER_DEFINED_FIELDS = "testUserDefinedFileds";
 
    /**

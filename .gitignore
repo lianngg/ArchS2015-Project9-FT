@@ -17,6 +17,7 @@ tmp/
 /.target
 .DS_Store
 /bin
+/data
 
 #keep the empty folder tmpfiles/
 #ignore any files inside tmpfiles/

@@ -1,64 +1,46 @@
 package models;
 
 import static org.junit.Assert.*;
-
+import java.util.ArrayList;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 public class DashboardTest {
 
+    private static Dashboard db;
+    private static ArrayList<DashboardItem> items = new ArrayList<DashboardItem>();
+    
     @Before
     public void setUp() throws Exception {
-    }
-
-    @After
-    public void tearDown() throws Exception {
-    }
-
-    @Test
-    public void testDashboard() {
-        fail("Not yet implemented");
-    }
-
-    @Test
-    public void testDashboardArrayListOfDashboardItemIntInt() {
-        fail("Not yet implemented");
+        db = new Dashboard(items, 0, 0);
     }
 
     @Test
     public void testGetActiveCount() {
-        fail("Not yet implemented");
+        assertEquals(db.getActiveCount(), 0);
     }
 
     @Test
     public void testGetItems() {
-        fail("Not yet implemented");
+        assertEquals(db.getItems(), new ArrayList<DashboardItem>());
     }
 
     @Test
     public void testGetTotalCount() {
-        fail("Not yet implemented");
+        assertEquals(db.getTotalCount(), 0);
     }
 
     @Test
     public void testSetActiveCount() {
-        fail("Not yet implemented");
-    }
-
-    @Test
-    public void testSetItems() {
-        fail("Not yet implemented");
+        db.setActiveCount(1);
+        assertEquals(db.getActiveCount(), 1);
     }
 
     @Test
     public void testSetTotalCount() {
-        fail("Not yet implemented");
-    }
-
-    @Test
-    public void testStatus() {
-        fail("Not yet implemented");
+        db.setTotalCount(1);
+        assertEquals(db.getTotalCount(), 1);
     }
 
 }

@@ -6,7 +6,8 @@ Rewrite the current Ruby on Rails web app on Heroku (http://cmu-sds.herokuapp.co
 Pre-Requisites running on a local machine
 ============
 Java 1.6+ (http://www.oracle.com/technetwork/java/javase/downloads)
-Play 2.2.x (http://www.playframework.com/download)
+
+Play 2.2.x (http://www.playframework.com/download), recommend Play 2.2.3
 
 
 How to run on a local machine
@@ -15,3 +16,4 @@ How to run on a local machine
 2. Downlaod the source code from https://github.com/cmusv-sc/ArchF2013-Project3-FT
 3. From the parent folder, run the command: 'play run'
 4. Local App will available at localhost:9000
+5. For code coverage, run 'play jacoco:cover' and the report will be in ./target/jacoco

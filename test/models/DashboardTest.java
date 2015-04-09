@@ -8,8 +8,8 @@ import org.junit.Test;
 
 public class DashboardTest {
 
-    private static Dashboard db;
-    private static ArrayList<DashboardItem> items = new ArrayList<DashboardItem>();
+    private Dashboard db;
+    private ArrayList<DashboardItem> items = new ArrayList<DashboardItem>();
     
     @Before
     public void setUp() throws Exception {
@@ -23,7 +23,7 @@ public class DashboardTest {
 
     @Test
     public void testGetItems() {
-        assertEquals(db.getItems(), new ArrayList<DashboardItem>());
+        assertEquals(db.getItems(), items);
     }
 
     @Test

@@ -22,3 +22,22 @@ dist
 tmpfiles/*
 !tmpfiles/.gitkeep
 AwsCredentials.properties
+
+
+# Ignore Play! working directory #
+bin/
+/db
+.eclipse
+/lib/
+/logs/
+/modules
+/project/project
+/project/target
+/target
+tmp/
+test-result
+server.pid
+*.iml
+*.eml
+/dist/
+.cache

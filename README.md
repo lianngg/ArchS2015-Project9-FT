@@ -1,4 +1,4 @@
-Fall-2013-CMUSDS
+Spring-2015-SAD-TEAM9
 ================
 
 Rewrite the current Ruby on Rails web app on Heroku (http://cmu-sds.herokuapp.com/) into Java Play framework, aligning with the current APIs, to handle metadata view/creation/deletion of our Sensor Data Service Platform. Also, this platform will allow users to report bugs and have a detailed view of active VS nonactive sensors. This platform makes use of the Sensor Service Platform API, a REST API for interacting with the platform.
@@ -15,3 +15,4 @@ How to run on a local machine
 2. Downlaod the source code from https://github.com/cmusv-sc/ArchF2013-Project3-FT
 3. From the parent folder, run the command: 'play run'
 4. Local App will available at localhost:9000
+=======

@@ -15,16 +15,6 @@ import org.junit.runners.JUnit4;
 
 @RunWith(JUnit4.class)
 public class DeviceTest {
-	private String id;
-	private String deviceUri;
-	private double longitude;
-	private double latitude;
-	private double altitude;
-	private String deviceTypeName;
-	private String representation;
-	private String deviceUserDefinedFields;
-	private List<String> sensorTypeNames = new ArrayList<String>();
-	private List<String> sensorNames = new ArrayList<String>();
 	
 	private static Device device = new Device();
 	private static List<String> SENSOR_TYPE_NAMES = new ArrayList<String>();

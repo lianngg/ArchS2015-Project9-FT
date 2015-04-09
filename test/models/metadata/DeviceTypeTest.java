@@ -1,4 +1,4 @@
-package models;
+package models.metadata;
 
 import static org.junit.Assert.assertEquals;
 

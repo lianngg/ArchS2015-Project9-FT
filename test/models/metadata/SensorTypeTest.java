@@ -27,6 +27,11 @@ public class SensorTypeTest {
 		sensorType.setManufacturer(MANUFACTURER);
 		sensorType.setVersion(VERSION);
 		sensorType.setMaxValue(MAX_VALUE);
+		sensorType.setInterpreter(INTERPRETER);
+		sensorType.setMinValue(MIN_VALUE);
+		sensorType.setSensorCategoryName(SENSOR_CATEGORY_NAME);
+		sensorType.setSensorTypeUserDefinedFields(SENSOR_TYPE_USER_DEFINED_FIELDS);
+		sensorType.setUnit(UNIT);
 	}
 	
 	@Test
@@ -36,6 +41,11 @@ public class SensorTypeTest {
 		assertEquals(MANUFACTURER, sensorType.getManufacturer());
 		assertEquals(VERSION, sensorType.getVersion(),0.0001);
 		assertEquals(MAX_VALUE, sensorType.getMaxValue(),0.0001);
+		assertEquals(MIN_VALUE, sensorType.getMinValue(),0.0001);
+		assertEquals(SENSOR_CATEGORY_NAME, sensorType.getSensorCategoryName());
+		assertEquals(INTERPRETER, sensorType.getInterpreter());
+		assertEquals(SENSOR_TYPE_USER_DEFINED_FIELDS, sensorType.getSensorTypeUserDefinedFields());
+		assertEquals(UNIT, sensorType.getUnit());
 	}
 	
 }

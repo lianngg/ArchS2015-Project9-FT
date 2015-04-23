@@ -56,6 +56,7 @@ public class NasaRegistration {
 		this.userName = userNameField;
 		this.password = passwordField;
 		this.firstName = fNameField;
+		this.lastName = lNameField;
 		this.email = emailField;
 		this.mName = mNameField;
 		this.affliation = affiliationField;

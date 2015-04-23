@@ -35,6 +35,7 @@ public class DeviceTypeTest
        TEST_SENSOR_TYPE_NAMES.add("testType2");
        deviceType = new DeviceType(TEST_ID, TEST_DEVICE_TYPE, TEST_MANUFACTURER,
               TEST_VERSION, TEST_SENSOR_TYPE_NAMES, TEST_USER_DEFINED_FIELDS);
+       deviceType.setSensorTypeNames(TEST_SENSOR_TYPE_NAMES);
    }
    
    /**
@@ -46,6 +47,10 @@ public class DeviceTypeTest
       String deviceManufacturer = deviceType.getManufacturer();
       assertEquals(TEST_DEVICE_TYPE, deviceName);
       assertEquals(TEST_MANUFACTURER, deviceManufacturer);
+      assertEquals(TEST_ID, deviceType.getId());
+      assertEquals(TEST_SENSOR_TYPE_NAMES, deviceType.getSensorTypeNames());
+      assertEquals(deviceType.getVersion(), TEST_VERSION, 0.001);
+      assertEquals(TEST_USER_DEFINED_FIELDS, deviceType.getDeviceTypeUserDefinedFields());
    }
 }
 

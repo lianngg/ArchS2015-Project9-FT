@@ -14,6 +14,7 @@ import org.junit.runners.JUnit4;
 public class NasaRMdataTest {
 
 	private static NasaRMdata nasaRMdata;
+	private static NasaRMdata nasaRMdata1;
 	
 	private static String USER_NAME_FIELD = "userNameField";
 	private static String PASSWORD_FIELD = "passwordField";
@@ -47,8 +48,51 @@ public class NasaRMdataTest {
 		assertEquals(USER_NAME_FIELD, nasaRMdata.getUserNameField());
 		assertEquals(M_NAME_FIELD, nasaRMdata.getmNameField());
 		assertEquals(GOAL_FIELD, nasaRMdata.getGoalField());
+		assertEquals(PASSWORD_FIELD, nasaRMdata.getPasswordField());
+		assertEquals(F_NAME_FIELD, nasaRMdata.getfNameField());
+		assertEquals(L_NAME_FIELD, nasaRMdata.getlNameField());
+		assertEquals(AFFLIATION_FIELD, nasaRMdata.getAffliationField());
+		assertEquals(EMAIL_FIELD, nasaRMdata.getEmailField());
+		assertEquals(R_AREA_FIELD, nasaRMdata.getrAreaField());
+		assertEquals(ALGO_FIELD, nasaRMdata.getAlgoField());
+		assertEquals(B_CONCERNS_FIELD, nasaRMdata.getbConcernsField());
+		assertEquals(AWS_FAMILIARITY_FIELD, nasaRMdata.getAwsFamiliarityField());
+		
+		
 		assertEquals(sensorTypeNames, nasaRMdata.getSensorTypeNames());
+		
 	}
 	
+	@BeforeClass
+	public static void setter1(){
+		nasaRMdata1 = new NasaRMdata();
+		nasaRMdata1.setAffliationField(AFFLIATION_FIELD);
+		nasaRMdata1.setAlgoField(ALGO_FIELD);
+		nasaRMdata1.setAwsFamiliarityField(AWS_FAMILIARITY_FIELD);
+		nasaRMdata1.setbConcernsField(B_CONCERNS_FIELD);
+		nasaRMdata1.setEmailField(EMAIL_FIELD);
+		nasaRMdata1.setfNameField(F_NAME_FIELD);
+		nasaRMdata1.setGoalField(GOAL_FIELD);
+		nasaRMdata1.setlNameField(L_NAME_FIELD);
+		nasaRMdata1.setmNameField(M_NAME_FIELD);
+		nasaRMdata1.setPasswordField(PASSWORD_FIELD);
+		nasaRMdata1.setrAreaField(R_AREA_FIELD);
+		nasaRMdata1.setUserNameField(USER_NAME_FIELD);
+	}
 	
+	@Test
+	public void getter1(){
+		assertEquals(USER_NAME_FIELD, nasaRMdata1.getUserNameField());
+		assertEquals(M_NAME_FIELD, nasaRMdata1.getmNameField());
+		assertEquals(GOAL_FIELD, nasaRMdata1.getGoalField());
+		assertEquals(PASSWORD_FIELD, nasaRMdata1.getPasswordField());
+		assertEquals(F_NAME_FIELD, nasaRMdata1.getfNameField());
+		assertEquals(L_NAME_FIELD, nasaRMdata1.getlNameField());
+		assertEquals(AFFLIATION_FIELD, nasaRMdata1.getAffliationField());
+		assertEquals(EMAIL_FIELD, nasaRMdata1.getEmailField());
+		assertEquals(R_AREA_FIELD, nasaRMdata1.getrAreaField());
+		assertEquals(ALGO_FIELD, nasaRMdata1.getAlgoField());
+		assertEquals(B_CONCERNS_FIELD, nasaRMdata1.getbConcernsField());
+		assertEquals(AWS_FAMILIARITY_FIELD, nasaRMdata1.getAwsFamiliarityField());
+	}
 }

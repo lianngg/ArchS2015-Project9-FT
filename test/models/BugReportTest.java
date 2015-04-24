@@ -42,8 +42,7 @@ public class BugReportTest {
 		assertEquals(TEST_ORGANIZATION, bugReport.getOrganization());
 		assertEquals(TEST_NAME, bugReport.getName());
 		assertEquals(TEST_SOLVED, bugReport.getSolved());
-		assertEquals(TEST_TITLE, bugReport.getTitle());
-		
+		assertEquals(TEST_TITLE, bugReport.getTitle());	
 	}
 
 }

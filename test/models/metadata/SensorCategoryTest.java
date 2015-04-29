@@ -13,8 +13,7 @@ public class SensorCategoryTest {
 	private static String SENSOR_CATEGORY_NAME = "sensorCategoryName";
 	private static String PURPOSE = "purpose";
 	
-	@BeforeClass
-	public static void setter(){
+	public void init(){
 		sensorCategory.setId(ID);
 		sensorCategory.setSensorCategoryName(SENSOR_CATEGORY_NAME);
 		sensorCategory.setPurpose(PURPOSE);

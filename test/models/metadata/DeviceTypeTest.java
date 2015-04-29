@@ -7,15 +7,12 @@ import java.util.List;
 
 import models.metadata.DeviceType;
 
-import org.junit.BeforeClass;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.JUnit4;
 
-/**
- * Contains unit tests for Device Type
- */
-@RunWith(JUnit4.class)
+
+
 public class DeviceTypeTest
 {
    private static DeviceType deviceType;
@@ -26,31 +23,93 @@ public class DeviceTypeTest
    private static List<String> TEST_SENSOR_TYPE_NAMES = new ArrayList<String>();
    private static String TEST_USER_DEFINED_FIELDS = "testUserDefinedFileds";
 
-   /**
-    * Setup a sensor object to test on
-    */
-   @BeforeClass
-   public static void initSensor() {
+   public void initSensor() {
        TEST_SENSOR_TYPE_NAMES.add("testType1");
        TEST_SENSOR_TYPE_NAMES.add("testType2");
        deviceType = new DeviceType(TEST_ID, TEST_DEVICE_TYPE, TEST_MANUFACTURER,
               TEST_VERSION, TEST_SENSOR_TYPE_NAMES, TEST_USER_DEFINED_FIELDS);
        deviceType.setSensorTypeNames(TEST_SENSOR_TYPE_NAMES);
    }
+
+   @Before
+   public void setUp() throws Exception{
+	   initSensor();
+   }
    
-   /**
-    */
+   @After
+   public void tearDown() throws Exception{}
+   
    @Test
-   public void getterTest()
+   public void testAdd(){
+	   assertEquals(TEST_SENSOR_TYPE_NAMES, deviceType.getSensorTypeNames());
+   }
+   
+   @Test
+   public void testDelete(){
+	   TEST_SENSOR_TYPE_NAMES.remove("testType1");
+	   deviceType.deleteSensorTypeName("testType1");
+	   assertEquals(TEST_SENSOR_TYPE_NAMES, deviceType.getSensorTypeNames());
+   }
+
+   @Test
+   public void testGetDeviceName(){
+	   assertEquals(TEST_DEVICE_TYPE, deviceType.getDeviceTypeName());
+   }
+   
+   @Test
+   public void testGetDeviceManufacturer(){
+	   assertEquals(TEST_MANUFACTURER, deviceType.getManufacturer());
+   }
+   
+   @Test
+   public void testGetDeviceType(){
+	   assertEquals(TEST_ID, deviceType.getId());
+   }
+   
+   @Test
+   public void testGetSensorTypeNames(){
+	   assertEquals(TEST_SENSOR_TYPE_NAMES, deviceType.getSensorTypeNames());
+   }
+   
+   @Test
+   public void testGetVersion(){
+	   assertEquals(deviceType.getVersion(), TEST_VERSION, 0.001);
+   }
+   
+   @Test
+   public void testGetDeviceTypeUserDefinedFields()
    {
-      String deviceName =  deviceType.getDeviceTypeName();
-      String deviceManufacturer = deviceType.getManufacturer();
-      assertEquals(TEST_DEVICE_TYPE, deviceName);
-      assertEquals(TEST_MANUFACTURER, deviceManufacturer);
-      assertEquals(TEST_ID, deviceType.getId());
-      assertEquals(TEST_SENSOR_TYPE_NAMES, deviceType.getSensorTypeNames());
-      assertEquals(deviceType.getVersion(), TEST_VERSION, 0.001);
       assertEquals(TEST_USER_DEFINED_FIELDS, deviceType.getDeviceTypeUserDefinedFields());
+   }
+   
+   @Test
+   public void testSetID(){
+	   deviceType.setId(TEST_ID);
+	   assertEquals(TEST_ID, deviceType.getId());
+   }
+   
+   @Test
+   public void testSetDeviceTypeName(){
+	   deviceType.setDeviceTypeName(TEST_DEVICE_TYPE);
+	   assertEquals(TEST_DEVICE_TYPE, deviceType.getDeviceTypeName());
+   }
+   
+   @Test
+   public void testSetManufaxturer(){
+	   deviceType.setManufacturer(TEST_MANUFACTURER);
+	   assertEquals(TEST_MANUFACTURER, deviceType.getManufacturer());
+   }
+   
+   @Test
+   public void testSetVersion(){
+	   deviceType.setVersion(TEST_VERSION);
+	   assertEquals(deviceType.getVersion(), TEST_VERSION, 0.001);
+   }
+   
+   @Test
+   public void testSetDeviceTypeUserDefinedFields(){
+	   deviceType.setDeviceTypeUserDefinedFields(TEST_USER_DEFINED_FIELDS);
+	   assertEquals(TEST_USER_DEFINED_FIELDS, deviceType.getDeviceTypeUserDefinedFields());
    }
 }
 

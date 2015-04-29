@@ -2,12 +2,13 @@ package models.metadata;
 
 import static org.junit.Assert.assertEquals;
 
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class SensorTypeTest {
 
-	private static SensorType sensorType = new SensorType();
+	private static SensorType sensorType;
 	
 	private static String ID = "id";
 	private static String SENSOR_TYPE_NAME = "sensorTypeName";
@@ -20,32 +21,80 @@ public class SensorTypeTest {
 	private static String SENSOR_TYPE_USER_DEFINED_FIELDS = "sensorTypeUserDefinedFields";
 	private static String SENSOR_CATEGORY_NAME = "sensorCategoryName";
 	
-	@BeforeClass
-	public static void setter(){
-		sensorType.setId(ID);
-		sensorType.setSensorTypeName(SENSOR_TYPE_NAME);
-		sensorType.setManufacturer(MANUFACTURER);
-		sensorType.setVersion(VERSION);
-		sensorType.setMaxValue(MAX_VALUE);
-		sensorType.setInterpreter(INTERPRETER);
-		sensorType.setMinValue(MIN_VALUE);
-		sensorType.setSensorCategoryName(SENSOR_CATEGORY_NAME);
-		sensorType.setSensorTypeUserDefinedFields(SENSOR_TYPE_USER_DEFINED_FIELDS);
-		sensorType.setUnit(UNIT);
+	@Before
+	public void setUp() throws Exception{
+		sensorType = new SensorType();
 	}
 	
 	@Test
-	public void getter(){
+	public void test1(){
+		sensorType.setId(ID);
 		assertEquals(ID, sensorType.getId());
+	}
+	
+	@Test
+	public void test2(){
+		sensorType.setSensorTypeName(SENSOR_TYPE_NAME);
 		assertEquals(SENSOR_TYPE_NAME, sensorType.getSensorTypeName());
+
+	}
+	
+	@Test
+	public void test3(){
+		sensorType.setManufacturer(MANUFACTURER);
 		assertEquals(MANUFACTURER, sensorType.getManufacturer());
+
+	}
+	
+	@Test
+	public void test4(){
+		sensorType.setVersion(VERSION);
 		assertEquals(VERSION, sensorType.getVersion(),0.0001);
+
+
+	}
+	@Test
+	public void test5(){
+		sensorType.setMaxValue(MAX_VALUE);
 		assertEquals(MAX_VALUE, sensorType.getMaxValue(),0.0001);
-		assertEquals(MIN_VALUE, sensorType.getMinValue(),0.0001);
-		assertEquals(SENSOR_CATEGORY_NAME, sensorType.getSensorCategoryName());
+
+
+	}
+	
+	@Test
+	public void test6(){
+		sensorType.setInterpreter(INTERPRETER);
 		assertEquals(INTERPRETER, sensorType.getInterpreter());
+
+
+	}
+	
+	@Test
+	public void test7(){
+		sensorType.setMinValue(MIN_VALUE);
+		assertEquals(MIN_VALUE, sensorType.getMinValue(),0.0001);
+
+
+	}
+	
+	@Test
+	public void test8(){
+		sensorType.setSensorCategoryName(SENSOR_CATEGORY_NAME);
+		assertEquals(SENSOR_CATEGORY_NAME, sensorType.getSensorCategoryName());
+
+	}
+	
+	@Test
+	public void test9(){
+		sensorType.setSensorTypeUserDefinedFields(SENSOR_TYPE_USER_DEFINED_FIELDS);
 		assertEquals(SENSOR_TYPE_USER_DEFINED_FIELDS, sensorType.getSensorTypeUserDefinedFields());
-		assertEquals(UNIT, sensorType.getUnit());
+
+	}
+	
+	@Test
+	public void test10(){
+		sensorType.setUnit(UNIT);
+
 	}
 	
 }

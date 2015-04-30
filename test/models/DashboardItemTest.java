@@ -3,12 +3,12 @@ package models;
 import static org.junit.Assert.assertEquals;
 import models.metadata.Device;
 
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
-@RunWith(JUnit4.class)
 public class DashboardItemTest {
 	private static int TEST_STATUS = 0;
 	private static Device TEST_DEVICE = new Device();
@@ -18,9 +18,12 @@ public class DashboardItemTest {
 	private static Device TEST_DEVICE_2 = new Device();
 	private static DashboardItem dashBoardItem2;
 	
-	@BeforeClass
-	public static void init(){
+	@Before
+	public void setUp() throws Exception{
 		dashBoardItem = new DashboardItem(TEST_STATUS, TEST_DEVICE);
+		dashBoardItem2 = new DashboardItem();
+		dashBoardItem2.setStatus(TEST_STATUS_2);
+		dashBoardItem2.setDevice(TEST_DEVICE_2);
 	}
 	
 	@Test
@@ -29,13 +32,6 @@ public class DashboardItemTest {
 		Device device = dashBoardItem.getDevice();
 		assertEquals(TEST_STATUS, status);
 		assertEquals(TEST_DEVICE, device);
-	}
-	
-	@BeforeClass
-	public static void init2(){
-		dashBoardItem2 = new DashboardItem();
-		dashBoardItem2.setStatus(TEST_STATUS_2);
-		dashBoardItem2.setDevice(TEST_DEVICE_2);
 	}
 	
 	@Test

@@ -9,11 +9,13 @@ import org.junit.Test;
 public class DashboardTest {
 
     private Dashboard db;
+    private Dashboard db1;
     private ArrayList<DashboardItem> items = new ArrayList<DashboardItem>();
     
     @Before
     public void setUp() throws Exception {
         db = new Dashboard(items, 0, 0);
+        db1 = new Dashboard();
     }
 
     @Test
@@ -41,6 +43,12 @@ public class DashboardTest {
     public void testSetTotalCount() {
         db.setTotalCount(1);
         assertEquals(db.getTotalCount(), 1);
+    }
+    
+    @Test
+    public void testSetItems(){
+    	db.setItems(items);
+    	assertEquals(db.getItems(), items);
     }
 
 }

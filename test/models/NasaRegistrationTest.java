@@ -2,12 +2,12 @@ package models;
 
 import static org.junit.Assert.assertEquals;
 
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
-@RunWith(JUnit4.class)
 public class NasaRegistrationTest {
 	private static String TEST_USERNAME = "test_username";
 	private static String TEST_PASSWORD = "test_password";
@@ -25,11 +25,23 @@ public class NasaRegistrationTest {
 	private static NasaRegistration nasaRegistration1;
 	private static NasaRegistration nasaRegistration2 = new NasaRegistration();
 	
-	@BeforeClass
-	public static void init1(){
+	@Before
+	public void setUp() throws Exception{
 		 nasaRegistration1 = new NasaRegistration(TEST_USERNAME, TEST_PASSWORD, TEST_FIRSTNAME, 
 				 TEST_LASTNAME, TEST_EMAIL, TEST_RESEATCHAREA, 
 				 TEST_GOAL, TEST_ALGO, TEST_BUDGETCONCERNS, TEST_AWSFAMILIARITY, TEST_MNAME, TEST_AFFLIATION);
+		 nasaRegistration2.setAffliation(TEST_AFFLIATION);
+			nasaRegistration2.setAlgo(TEST_ALGO);
+			nasaRegistration2.setAwsFamiliarity(TEST_AWSFAMILIARITY);
+			nasaRegistration2.setBudgetConcerns(TEST_BUDGETCONCERNS);
+			nasaRegistration2.setEmail(TEST_EMAIL);
+			nasaRegistration2.setfNameField(TEST_FIRSTNAME);
+			nasaRegistration2.setGoal(TEST_GOAL);
+			nasaRegistration2.setLastName(TEST_LASTNAME);
+			nasaRegistration2.setPasswordField(TEST_PASSWORD);
+			nasaRegistration2.setResearchArea(TEST_RESEATCHAREA);
+			nasaRegistration2.setUserNameField(TEST_USERNAME);
+	
 	}
 	
 	@Test
@@ -45,21 +57,6 @@ public class NasaRegistrationTest {
 		assertEquals(TEST_ALGO, nasaRegistration1.getAlgo());
 		assertEquals(TEST_BUDGETCONCERNS, nasaRegistration1.getBudgetConcerns());
 		assertEquals(TEST_AWSFAMILIARITY, nasaRegistration1.getAwsFamiliarity());
-	}
-	
-	@BeforeClass
-	public static void init2(){
-		nasaRegistration2.setAffliation(TEST_AFFLIATION);
-		nasaRegistration2.setAlgo(TEST_ALGO);
-		nasaRegistration2.setAwsFamiliarity(TEST_AWSFAMILIARITY);
-		nasaRegistration2.setBudgetConcerns(TEST_BUDGETCONCERNS);
-		nasaRegistration2.setEmail(TEST_EMAIL);
-		nasaRegistration2.setfNameField(TEST_FIRSTNAME);
-		nasaRegistration2.setGoal(TEST_GOAL);
-		nasaRegistration2.setLastName(TEST_LASTNAME);
-		nasaRegistration2.setPasswordField(TEST_PASSWORD);
-		nasaRegistration2.setResearchArea(TEST_RESEATCHAREA);
-		nasaRegistration2.setUserNameField(TEST_USERNAME);
 	}
 	
 	@Test
